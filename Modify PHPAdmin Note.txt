@@ -1,0 +1,1 @@
+libraries/plugins/auth/AuthenticationCookie.class.php

@@ -1,0 +1,557 @@
+<html>
+<head>
+	<title>Live Dashboard</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.css">
+
+    <!-- Link Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+    <!-- Link Dropzone CSS -->
+    <link rel="stylesheet" href="css/dropzone.css">
+
+    <!-- Link Overlay Style CSS -->
+    <link rel="stylesheet" type="text/css" href="css/overlay_style_5.css" />
+
+    <!-- Link Slider Range CSS -->
+    <link rel="stylesheet" href="css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinNice.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.flip.min.js"></script>
+
+    <script type="text/javascript" src="http://tympanus.net/Development/FullscreenOverlayStyles/js/modernizr.custom.js"></script>
+
+    <!-- Latest google maps JavaScript -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCZSx3brL0MDNbGwCoQ0JoborGgsWpjpw8"></script>
+    <script src="js/snazzymaps.js"></script>
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="js/d3.v3.min.js"></script>
+	<script src="js/hammer.min.js"></script>
+	<script src="js/jquery.hammer.js"></script>
+
+    <script src="js/raphael-min.js"></script>
+	<script src="js/morris-0.4.1.min.js"></script>
+	<script src="js/live_dashboard_libs.js"></script>
+	<script src="js/dropzone.js"></script>
+	<script src="js/ion.rangeSlider.min.js"></script>
+
+
+
+
+	<script type="text/javascript">
+
+	
+
+
+		
+		$( function() {
+
+			$("#gender_range").ionRangeSlider({
+
+				type: "double",
+			    grid: true,
+			    min: 0,
+			    max: 100,
+			    from: 18,
+			    to: 60,
+			    prefix: "Age ",
+			    onStart: function (data) {
+			        console.log("onStart");
+			    },
+			    onChange: function (data) {
+			    	
+			    	var form = data.from;
+			    	var to = data.to;
+
+			    	var from_percent = data.from_percent;
+			    	var to_percent = data.to_percent;
+
+                   
+
+			    	var male_from =  Math.floor((Math.random() * 50) + 25) ;
+			    	var male_to   =  Math.floor((Math.random() * 75) + 25) ;
+
+			    	var female_from = Math.floor((Math.random() * 50) + 25) ;
+			    	var female_to   = Math.floor((Math.random() * 75) + 25) ;
+
+                    ///////////////////////////////////////    MS    ////////////////////////////////////
+
+			        $('.male').css('background','-ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+male_from+'%, rgba(231,56,39,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        $('.female').css('background','-ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+female_from+'%, rgba(231,56,39,1) '+female_to+'%, rgba(231,56,39,1) 100%)');
+
+			        //////////////////////////////////////////////////////////////////////////////////////////
+
+			    	///////////////////////////////////////    Opera    ////////////////////////////////////
+
+			        $('.male').css('background','-o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+male_from+'%, rgba(231,56,39,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        $('.female').css('background','-o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+female_from+'%, rgba(231,56,39,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        //////////////////////////////////////////////////////////////////////////////////////////
+
+                    ///////////////////////////////////////    WebKit    ////////////////////////////////////
+
+			        $('.male').css('background','-webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop('+male_from+'%, rgba(255,255,255,1)), color-stop('+male_to+'%, rgba(231,56,39,1)), color-stop(100%, rgba(231,56,39,1)))');
+
+			        $('.female').css('background','-webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop('+female_from+', rgba(255,255,255,1)), color-stop('+female_to+'%, rgba(231,56,39,1)), color-stop(100%, rgba(231,56,39,1)))');
+
+
+			        $('.male').css('background','-webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+male_from+'%, rgba(231,56,39,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        $('.female').css('background','-webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+female_from+'%, rgba(231,56,39,1) '+female_to+'%, rgba(231,56,39,1) 100%)');
+
+			        //////////////////////////////////////////////////////////////////////////////////////////
+
+			    	///////////////////////////////////////    Mozzila    ////////////////////////////////////
+
+			        $('.male').css('background','-moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+male_from+'%, rgba(231,56,39,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        $('.female').css('background','-moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+female_from+'%, rgba(231,56,39,1) '+female_to+'%, rgba(231,56,39,1) 100%)');
+
+			        //////////////////////////////////////////////////////////////////////////////////////////
+
+			    	///////////////////////////////////////    fixe to all    ////////////////////////////////
+
+			        $('.male').css('background','linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+male_from+'%, rgba(230,39,109,1) '+male_to+'%, rgba(231,56,39,1) 100%)');
+
+			        $('.female').css('background','linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) '+female_from+'%, rgba(230,39,109,1) '+female_to+'%, rgba(231,56,39,1) 100%)');
+
+			        //////////////////////////////////////////////////////////////////////////////////////////
+
+			    },
+			    onFinish: function (data) {
+			        console.log("onFinish");
+			    },
+			    onUpdate: function (data) {
+			        console.log("onUpdate");
+			    }
+
+			});
+
+
+		    $( ".chartItem" ).draggable({ 
+		    	revert: "invalid", 
+		    	helper: function () {
+	            //Code here
+	            var item = $(this).attr('type');
+	            return $("<div class='dragger'></div>").append('<img src="img/'+item+'.png"  width="80%"/>');
+        		} 
+		    });
+		     
+		    $( ".droppable" ).droppable({
+		      classes: {
+		        "ui-droppable-active": "ui-state-active",
+		        "ui-droppable-hover": "ui-state-hover"
+		      },
+		      drop: function( event, ui ) {
+		      	
+		      	$(this).closest('.card').css('background-image','none');
+
+                var data = $(ui.draggable).clone().removeAttr('class');
+                var dataType = data.attr('type');
+                
+                var ranDomNum = Math.floor((Math.random() * 100000) + 1);
+
+                
+		      	 
+		      	 $(this).html(showGraph(dataType, ranDomNum));
+                  
+                  ///////////////////////////////////////////////////////
+                  if(dataType === 'pie'){
+		            Morris.Donut({
+					 element: dataType+'_'+ranDomNum,
+					  data: [
+					    {label: "Product A", value: 12},
+					    {label: "Product B", value: 30},
+					    {label: "Product C", value: 20}
+					  ],
+					  labelColor: '#fff',
+					  colors: [
+						    '#'+Math.floor(Math.random()*16777215).toString(16),
+						    '#'+Math.floor(Math.random()*16777215).toString(16),
+						    '#'+Math.floor(Math.random()*16777215).toString(16)
+						  ]
+					}); 
+				  }
+                  ////////////////////////////////////////////////////////
+                  ///////////////////////////////////////////////////////
+                  if(dataType === 'bar'){
+		            Morris.Bar({
+					  element: dataType+'_'+ranDomNum,
+					  data: [
+					    {x: 'Q1', y: 3, z: 2, a: 3},
+					    {x: 'Q2', y: 2, z: null, a: 1},
+					    {x: 'Q3', y: 0, z: 2, a: 4},
+					    {x: 'Q4', y: 2, z: 4, a: 3}
+					  ],
+					  
+					  xkey: 'x',
+					  ykeys: ['y', 'z', 'a'],
+					  labels: ['Mumbai', 'Pune', 'Nashik']
+					}).on('click', function(i, row){
+					  console.log(i, row);
+					});
+				  }
+                  ////////////////////////////////////////////////////////
+                  ///////////////////////////////////////////////////////
+                  if(dataType === 'line'){
+		            Morris.Line({
+					  element: dataType+'_'+ranDomNum,
+					  data: [
+					    { y: '2006', a: 100, b: 90, c: 60 },
+					    { y: '2007', a: 75,  b: 65, c: 70 },
+					    { y: '2008', a: 50,  b: 40, c: 50 },
+					    { y: '2009', a: 75,  b: 65, c: 65 },
+					    { y: '2010', a: 50,  b: 40, c: 49 },
+					    { y: '2011', a: 75,  b: 65, c: 75 },
+					    { y: '2012', a: 100, b: 90, c: 57 }
+					  ],
+					  xkey: 'y',
+					  ykeys: ['a', 'b', 'c'],
+					  labels: ['Mumbai', 'Pune','Nagpur']
+					}); 
+				  }
+                  ////////////////////////////////////////////////////////
+                  ///////////////////////////////////////////////////////
+                  if(dataType === 'area'){
+		            Morris.Area({
+					  element: dataType+'_'+ranDomNum,
+					  data: [
+					    { y: '2006', a: 100, b: 90, c: 60 },
+					    { y: '2007', a: 75,  b: 65, c: 70 },
+					    { y: '2008', a: 50,  b: 40, c: 50 },
+					    { y: '2009', a: 75,  b: 65, c: 65 },
+					    { y: '2010', a: 50,  b: 40, c: 49 },
+					    { y: '2011', a: 75,  b: 65, c: 75 },
+					    { y: '2012', a: 100, b: 90, c: 57 }
+					  ],
+					  xkey: 'y',
+					  ykeys: ['a', 'b', 'c'],
+					  labels: ['Nashik', 'Aurangabad','Pune']
+					}); 
+				  }
+                  ////////////////////////////////////////////////////////
+                  
+                 
+		      	
+
+			  }
+		    });
+
+  		
+
+
+  	 	var eventDetect = $(".droppable");
+		eventDetect.hammer().on("swipeleft swiperight doubletap tap", function(ev) {
+
+			
+		    
+		    
+		    var userEvent  = ev.type;
+		    var current_id = $(this).children("div:eq(1)").attr('id');
+		    
+		    var graph  = current_id.split("_");
+
+		    var graphType  = graph[0];
+		    
+
+		    if(userEvent === 'swipeleft'){
+
+		    	
+		    	//$(this).find('div').fadeIn();
+               
+               $('.showFullScreenSettings').html(current_id + ' ' + graphType);
+                
+
+		    }
+
+
+		    if(userEvent === 'swiperight'){
+
+			    //$(this).find('div').fadeOut();
+			    toggleOverlay();
+                
+		    }
+
+		    if(userEvent === 'tap'){
+
+		    	
+
+		    }
+
+
+
+		    
+
+		});
+
+		});
+
+		
+
+
+
+	</script>
+
+</head>
+<body class="bg">
+
+<div class="container-fluid">
+	<div class="row">
+  		
+  		<div class="col-md-3 top-box-1 text-center">
+
+	  		<div class="card"> 
+				  <div class="front droppable"> 
+				     
+				  </div> 
+				  <div class="back">
+				     
+				  </div> 
+			</div>
+
+	    </div>
+
+  		<div class="col-md-3 top-box-2 text-center">
+
+  		    <div class="card"> 
+				  <div class="front droppable"> 
+				     
+				  </div> 
+				  <div class="back">
+	
+				  </div> 
+			</div>
+
+  		</div>
+
+  		<div class="col-md-3 top-box-3 text-center">
+            
+            <div class="card"> 
+				  <div class="front droppable"> 
+				     
+				  </div> 
+				  <div class="back">
+				     
+				  </div> 
+			</div>
+
+  		</div>
+
+  		<div class="col-md-3 top-box-4 text-center">
+            
+            <div class="card"> 
+				  <div class="front droppable"> 
+				     
+				  </div> 
+				  <div class="back">
+				     
+				  </div> 
+			</div>
+
+  		</div>
+
+  	</div>
+
+  	<div class="row">
+  		<div class="col-md-9 mid-left">
+              
+              <div class="row">
+			  		<div class="col-xs-12 col-md-8 mid-left-top-box-1 worldmap nopadding">
+
+
+					<div id="map"></div>			
+
+
+			  		</div>
+
+			  		<div class="col-xs-12 col-md-4 mid-left-top-box-2">
+
+			  					<div class="row">
+								  		<div class="col-xs-6 mid-left-male text-center nopadding male">
+
+                                        <img src="img/male-trans.png"  width="100%" />
+
+								  		</div>
+								  		<div class="col-xs-6 mid-left-female text-center nopadding female">
+
+										<img src="img/female-trans.png" width="100%"/>
+								  		
+								  		</div>
+			  					</div>
+
+
+			  					<div class="row">
+								  		
+								  		<div class="col-md-12 mid-left-slider text-center">
+
+			  					        <input type="text" id="gender_range" name="gender_range" value="" />
+
+			  					        </div>
+
+			  					</div>
+
+
+			  					<div class="row">
+				                    <div class="col-md-12 ">
+				                          <div class="swiper-container">
+										        <div class="swiper-wrapper products">
+										            <div class="swiper-slide">Slide 1</div>
+										            <div class="swiper-slide">Slide 2</div>
+										            <div class="swiper-slide">Slide 3</div>
+										            <div class="swiper-slide">Slide 4</div>
+										            <div class="swiper-slide">Slide 5</div>
+										            <div class="swiper-slide">Slide 6</div>
+										            <div class="swiper-slide">Slide 7</div>
+										            <div class="swiper-slide">Slide 8</div>
+										            <div class="swiper-slide">Slide 9</div>
+										            <div class="swiper-slide">Slide 10</div>
+										        </div>
+										        <!-- Add Pagination -->
+										        <div class="swiper-pagination"></div>
+									    	</div>
+				                    </div>
+							  	</div>
+
+                                
+                                
+
+			  		</div>
+			  </div>
+
+
+	    </div>
+  		<div class="col-md-3 mid-right">
+
+  				<div class="row">
+			  		<div class="col-xs-3 mid-right-top-box-1">
+                    <img src="img/pie.png"   class="chartItem" type="pie"/>
+				    </div>
+			  		<div class="col-xs-3 mid-right-top-box-2">
+					<img src="img/bar.png"   class="chartItem" type="bar"/>
+			  		</div>
+			  		<div class="col-xs-3 mid-right-top-box-3">
+			  		<img src="img/line.png"  class="chartItem" type="line"/>
+			  		</div>
+			  		<div class="col-xs-3 mid-right-top-box-4">
+			  		<img src="img/area.png"  class="chartItem" type="area"/>
+			  		</div>
+			  	</div>
+
+
+
+			  	<div class="row">
+                    <div class="col-md-12 mid-right-mid-swiper">
+                          <div class="swiper-container">
+						        <div class="swiper-wrapper country">
+						            <div class="swiper-slide">Slide 1</div>
+						            <div class="swiper-slide">Slide 2</div>
+						            <div class="swiper-slide">Slide 3</div>
+						            <div class="swiper-slide">Slide 4</div>
+						            <div class="swiper-slide">Slide 5</div>
+						            <div class="swiper-slide">Slide 6</div>
+						            <div class="swiper-slide">Slide 7</div>
+						            <div class="swiper-slide">Slide 8</div>
+						            <div class="swiper-slide">Slide 9</div>
+						            <div class="swiper-slide">Slide 10</div>
+						        </div>
+						        <!-- Add Pagination -->
+						        <div class="swiper-pagination"></div>
+					    	</div>
+                    </div>
+			  	</div>
+
+  		</div>
+  	</div>
+</div>
+
+<!-- ########### settings part ############ -->
+
+<div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+        <p>Some text in the modal.</p>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<!-- open/close -->
+		<div class="overlay overlay-scale fullscreenOption">
+			<button type="button" class="overlay-close">Close</button>
+			<div class="showFullScreenSettings"></div> 
+		</div>
+
+<!-- ################################# -->
+
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = [];
+    $('.swiper-container').each(function(index){
+
+        var $el = $(this);
+
+        if(index==0){
+        	var slidesPerView = 3;
+        }else{
+        	var slidesPerView = 1;
+        }
+
+        swiper[index] = $el.swiper({
+            //Your options here:
+            mode:'horizontal',
+            loop: true,
+            slidesPerView: slidesPerView,
+            pagination: $el.find('.swiper-pagination')[0],
+            paginationClickable: true,
+            roundLengths: true
+        });
+
+        $el.find('.prev-slide').on('click', function(){
+            swiper[index].swipePrev();
+        });
+
+        $el.find('.next-slide').on('click', function(){
+            swiper[index].swipeNext();
+        });
+
+    });
+    </script>
+
+    
+    <script type="text/javascript" src="js/overlay.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+
+	
+</body>
+</html>

@@ -1,0 +1,291 @@
+.bg {
+
+	background-color: #252436;
+
+}
+
+div[class^="top-box-"], div[class*=" top-box-"]{
+
+	height: 200px;
+	border-width: 1px;
+	border-style: dashed dashed dashed dashed; 
+	border-color: #3a394e;
+	padding-top: 5px;
+}
+
+.mid-left, .mid-right{
+    
+	border-width: 1px;
+	border-style: dashed dashed dashed dashed; 
+	border-color: #3a394e;
+
+}
+
+.mid-right-top-box-1, .mid-right-top-box-2, .mid-right-top-box-3, .mid-right-top-box-4{
+	height: 80px;
+	border-width: 1px;
+	border-style: dashed dashed dashed dashed; 
+	border-color: #3a394e;
+	padding-top: 12px;
+}
+
+.mid-right-top-box-1 img, .mid-right-top-box-2 img, .mid-right-top-box-3 img, .mid-right-top-box-4 img{
+	width: 100%;
+}
+
+
+
+.mid-left-top-box-1, .mid-left-top-box-2{
+
+	border-width: 1px;
+	border-style: none dashed none none; 
+	border-color: #3a394e;
+	padding-top: 12px;
+}
+
+.mid-left-male, .mid-left-female{
+	height: auto;
+	border-width: 1px;
+	border-style: none dashed none none; 
+	border-color: #3a394e;
+	padding-top: 12px;
+}
+
+
+.card{
+	background: url(../img/dragdrop_hd.gif) no-repeat center center;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card, .front{
+
+	width: 100%;
+	height: 185px;
+}
+
+.worldmap{
+
+  background: url(../img/worldmap.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+}
+
+.module {
+  background: url(http://orig10.deviantart.net/b44f/f/2013/032/9/a/sci_fi_web_by_emilwidlund-d5ti5if.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  width: 100%;
+  height: 185px;
+}
+.module > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 185px;
+  padding: 10px 0px;
+  background: inherit;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.module > header::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.module > header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25)
+}
+.module > header > .row {
+  margin: 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.back .fa{
+
+	color: #fff !important;
+    
+}
+
+[id^=pie]{
+
+	width:60%;
+	height: 180px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+[id^=bar]{
+	width:98%;
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+[id^=line]{
+	width:98%;
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+[id^=area]{
+	width:98%;
+	height: 160px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.box-top-options-pie{
+	width: 100%;
+	height: 35px;
+	margin-bottom: -8%;
+	color: #fff;
+	text-align: right;
+}
+
+.box-top-options-bar{
+	width: 100%;
+	height: 35px;
+	margin-bottom: -8%;
+	color: #fff;
+	text-align: right;
+}
+
+.box-top-options-line{
+	width: 100%;
+	height: 35px;
+	margin-bottom: -8%;
+	color: #fff;
+	text-align: right;
+}
+
+.box-top-options-area{
+	width: 100%;
+	height: 35px;
+	margin-bottom: -8%;
+	color: #fff;
+	text-align: right;
+}
+
+.box-top-options-back{
+	width: 100%;
+}
+
+.morris-hover-point{
+
+	float: left;
+	padding-left: 5px;
+}
+
+.morris-hover-row-label{
+
+	font-size: 16px;
+	color: #fff;
+	float: left;
+	padding-right: 10px;
+}
+
+
+.swiper-container .country{
+        width: 100%;
+        height: 290px;
+}
+
+.swiper-container .products{
+        width: 100%;
+        height: 120px;
+}
+
+
+
+.swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+}
+
+.male{
+	
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(230,39,109,1) 35%, rgba(231,56,39,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(10%, rgba(230,39,109,1)), color-stop(35%, rgba(231,56,39,1)), color-stop(100%, rgba(231,56,39,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(230,39,109,1) 35%, rgba(231,56,39,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(230,39,109,1) 35%, rgba(231,56,39,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(230,39,109,1) 35%, rgba(231,56,39,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(230,39,109,1) 35%, rgba(231,56,39,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e73827', GradientType=0 );
+
+}
+
+.female{
+	
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(231,56,39,1) 75%, rgba(231,56,39,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(75%, rgba(231,56,39,1)), color-stop(100%, rgba(231,56,39,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(231,56,39,1) 75%, rgba(231,56,39,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(231,56,39,1) 75%, rgba(231,56,39,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(231,56,39,1) 75%, rgba(231,56,39,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(231,56,39,1) 75%, rgba(231,56,39,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e73827', GradientType=0 );
+
+}
+
+.female{
+
+	border-right: none !important;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+#map{
+	height: 370px;
+}
